@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "newslens_Django",
+			"path": "../../../newslens_Django"
+		},
+		{
+			"name": "202412_aIlecture",
+			"path": "../../../202412_aIlecture"
+		},
+		{
+			"name": "20240930_project_news",
+			"path": "../../../20240930_project_news"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "202412_aIlecture",
+		"git.ignoreLimitWarning": true
+	}
+}
