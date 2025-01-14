@@ -1,5 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import Header from '@/components/Header/Header'
+import Footer from '@/components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: '메디더원 - 관절 건강 전문 건강기능식품',
@@ -13,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
