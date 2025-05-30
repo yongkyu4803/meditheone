@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,5 +19,26 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+/* 폰트 가중치 설정 */
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* 커스텀 컴포넌트 스타일 */
+@layer components {
+  .feature-card {
+    @apply bg-white rounded-2xl p-8 shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-gray-800 leading-tight;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400;
+  }
 }

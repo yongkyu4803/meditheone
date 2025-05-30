@@ -19,12 +19,12 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="fixed w-full bg-white shadow-md z-50">
+    <header className="fixed w-full bg-gradient-to-r from-orange-50 to-orange-100 z-50">
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* 로고 */}
-          <Link href="/" className="text-2xl font-bold">
-            메디더원
+          <Link href="/" className="flex items-center space-x-2">
+            <span className="text-xl font-semibold text-orange-600">MEDITHEONE</span>
           </Link>
 
           {/* 데스크톱 메뉴 */}
@@ -35,14 +35,14 @@ export default function Header() {
                 href={item.href}
                 className={`${
                   isActive(item.href)
-                    ? 'text-blue-600 font-bold'
-                    : 'text-gray-600 hover:text-blue-600'
+                    ? 'text-orange-600 font-bold'
+                    : 'text-gray-600 hover:text-orange-600'
                 } transition-colors`}
               >
                 {item.name}
               </Link>
             ))}
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            <button className="bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors">
               구매하기
             </button>
           </div>
@@ -77,7 +77,7 @@ export default function Header() {
                 href={item.href}
                 className={`${
                   isActive(item.href)
-                    ? 'text-blue-600 font-bold'
+                    ? 'text-orange-600 font-bold'
                     : 'text-gray-600'
                 } block py-2`}
                 onClick={() => setIsMenuOpen(false)}
@@ -85,7 +85,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <button className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 my-4">
+            <button className="w-full bg-orange-600 text-white px-6 py-2 rounded-lg hover:bg-orange-700 transition-colors my-4">
               구매하기
             </button>
           </div>
