@@ -53,26 +53,26 @@ export default function HeroSection() {
   return (
     <div className="relative w-4/5 mx-auto h-[600px] overflow-hidden bg-white rounded-2xl">
       <div className="relative w-full h-full flex items-center">
-        <div className="relative w-full h-full overflow-hidden rounded-2xl"> {/* Added rounded-2xl here */}
+        <div className="relative w-full h-full overflow-hidden rounded-2xl">
           {isTransitioning ? (
             <>
-              <div className="absolute w-full h-full transition-transform duration-2000 ease-out" // Duration changed
+              <div className="absolute w-full h-full transition-transform duration-2000 ease-out"
                    style={{ transform: `translateX(${prevIndex > currentIndex ? '100%' : '-100%'})` }}>
                 <Image
                   src={slides[prevIndex].image}
                   alt={slides[prevIndex].title}
                   fill
-                  className="object-cover rounded-2xl" // Changed to rounded-2xl
+                  className="object-cover rounded-2xl"
                   priority
                 />
               </div>
-              <div className="absolute w-full h-full transition-transform duration-2000 ease-out" // Duration changed
+              <div className="absolute w-full h-full transition-transform duration-2000 ease-out"
                    style={{ transform: `translateX(${prevIndex > currentIndex ? '-100%' : '100%'})` }}>
                 <Image
                   src={image}
                   alt={title}
                   fill
-                  className="object-cover rounded-2xl" // Changed to rounded-2xl
+                  className="object-cover rounded-2xl"
                   priority
                 />
               </div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
                 src={image}
                 alt={title}
                 fill
-                className="object-cover rounded-2xl" // Changed to rounded-2xl
+                className="object-cover rounded-2xl"
                 priority
               />
             </div>
