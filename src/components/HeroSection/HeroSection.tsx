@@ -56,7 +56,7 @@ export default function HeroSection() {
         <div className="relative w-full h-full overflow-hidden rounded-2xl"> {/* Added rounded-2xl here */}
           {isTransitioning ? (
             <>
-              <div className="absolute w-full h-full transition-transform duration-2000 ease-out" // Duration changed
+              <div className="absolute w-full h-full transition-transform duration-[2000ms] ease-out" // Duration changed
                    style={{ transform: `translateX(${prevIndex > currentIndex ? '100%' : '-100%'})` }}>
                 <Image
                   src={slides[prevIndex].image}
@@ -66,7 +66,7 @@ export default function HeroSection() {
                   priority
                 />
               </div>
-              <div className="absolute w-full h-full transition-transform duration-2000 ease-out" // Duration changed
+              <div className="absolute w-full h-full transition-transform duration-[2000ms] ease-out" // Duration changed
                    style={{ transform: `translateX(${prevIndex > currentIndex ? '-100%' : '100%'})` }}>
                 <Image
                   src={image}
